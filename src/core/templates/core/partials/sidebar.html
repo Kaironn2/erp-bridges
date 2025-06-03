@@ -1,0 +1,38 @@
+<aside class="w-64 bg-white text-black flex flex-col shadow-md" x-data="{ openMenu: null }">
+
+    <!-- Title -->
+    <div class="p-6 text-2x1 font-bold border-b border-gray-200">
+        ERP Bridges
+    </div>
+
+    <nav class="flex-1 overflow-y-auto p-4 space-y-2">
+
+        <!-- Source A -->
+        <div>
+            
+            <button
+                @click="openMenu === 1 ? openMenu = null : openMenu = 1"
+                class="w-full flex justify-between items-center px-4 py-2 rounded hover:text-violet-600 transition"
+            >
+                <span>Clientes</span>
+                <svg
+                    :class="{ '-rotate-90': openMenu === 1 }"
+                    class="h-4 w-4 transform transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div x-show="openMenu === 1" x-collapse x-transition class="pl-6 mt-2 space-y-1 overflow-hidden">
+                <a href="#" class="block px-2 py-1 rounded hover:text-violet-600">Clientes</a>
+                <a href="#" class="block px-2 py-1 rounded hover:text-violet-600">Ordens de Compra</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+</aside>

@@ -1,0 +1,34 @@
+[project]
+name = "erp-bridges"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.2.1",
+]
+
+[dependency-groups]
+dev = [
+    "taskipy>=1.14.1",
+]
+
+[tool.ruff]
+line-length = 79
+extend-exclude = ['migrations', 'settings.py', 'manage.py']
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+[tool.taskipy.tasks]
+run = 'uv run manage.py runserver'
+startapp = 'uv run manage.py startapp'
+migrate = 'uv run manage.py migrate'
+makemigrations = 'uv run manage.py makemigrations'
+collectstatic = 'uv run manage.py collectstatic --noinput'
+superuser = 'uv run manage.py createsuperuser'

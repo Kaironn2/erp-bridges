@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Bridges Login</title>
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    
+    <div class="w-full max-w-md bg-white p-8 rounded-x1 shadow-lg">
+        <h1 class="text-3xl font-bold text-violet-600 text-center mb-6">ERP Bridges</h1>
+
+        <form method="post">
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <div class="text-sm text-red-600">
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+            
+            <div class="space-y-6">
+
+                <!-- Username -->
+                <div>
+                    <label for="id_username" class="block text-sm font-medium text-gray-700">Usuário</label>
+                    <input type="text" name="username" id="id_username" autocomplete="username"
+                    class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-600"
+                    required>
+                </div>
+
+                <!-- Password -->
+                <div>
+                    <label for="id_password" class="block text-sm font-medium text-gray-700">Senha</label>
+                    <input type="text" name="password" id="id_password" autocomplete="username"
+                    class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-600"
+                    required>
+                </div>
+
+                <!-- Login Submit Button -->
+                <button type="submit" class="w-full bg-violet-600 text-white font-semibold py-2 rounded-lg hover:bg-violet-700 transition">
+                    Entrar
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
