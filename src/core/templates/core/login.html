@@ -4,50 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERP Bridges Login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
-    
-    <div class="w-full max-w-md bg-white p-8 rounded-x1 shadow-lg">
-        <h1 class="text-3xl font-bold text-violet-600 text-center mb-6">ERP Bridges</h1>
+<body class="h-screen w-screen flex overflow-hidden font-[lexend]">
 
-        <form method="post">
-            {% csrf_token %}
+    <!-- Left Container -->
+    <div class="w-1/2 relative bg-violet-600 text-white flex items-center justify-center bg-gradient-to-br from-violet-600 to-violet-800">
 
-            {% if form.non_field_errors %}
-                <div class="text-sm text-red-600">
-                    {{ form.non_field_errors }}
-                </div>
-            {% endif %}
-            
-            <div class="space-y-6">
+        <div class="z-10 text-center px-8">
+            <h1 class="text-7xl font-bold mb-4">ERP Bridges</h1>
+            <p class="text-2xl font-light">Sua ponte de informações!</p>
+        </div>
 
-                <!-- Username -->
-                <div>
-                    <label for="id_username" class="block text-sm font-medium text-gray-700">Usuário</label>
-                    <input type="text" name="username" id="id_username" autocomplete="username"
-                    class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-600"
-                    required>
-                </div>
+    </div>
 
-                <!-- Password -->
-                <div>
-                    <label for="id_password" class="block text-sm font-medium text-gray-700">Senha</label>
-                    <input type="text" name="password" id="id_password" autocomplete="username"
-                    class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-600"
-                    required>
-                </div>
+    <!-- Right Container -->
+    <div class="w-1/2 bg-white flex flex-col items-center justify-center">
 
-                <!-- Login Submit Button -->
-                <button type="submit" class="w-full bg-violet-600 text-white font-semibold py-2 rounded-lg hover:bg-violet-700 transition">
-                    Entrar
-                </button>
+        <h1 class="text-gray-600 m-4">Acesse sua conta para começar.</h1>
 
+        <form class="w-full max-w-md space-y-6 flex flex-col">
+        
+            <!-- Username -->
+            <div class="w-full px-4 py-4 bg-gray-200 rounded-full">
+                <input type="text" name="username" class="w-full outline-none" placeholder="Digite seu usuário...">
             </div>
 
-        </form>
+            <!-- Password -->
+            <div class="w-full px-4 py-4 bg-gray-200 rounded-full">
+                <input type="password" name="password" class="w-full outline-none" placeholder="Digite sua senha...">
+            </div>
 
+            <!-- Login Button -->
+            <button type="submit" class="w-1/2 mx-auto py-2 bg-violet-600 hover:bg-violet-700 text-white font-semibold rounded-full">
+                Entrar
+            </button>
+
+        </form>
+        
     </div>
 
 </body>

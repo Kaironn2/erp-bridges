@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Tailwind Watch",
+      "type": "shell",
+      "command": "npx @tailwindcss/cli -i ./static/src/css/input.css -o ./static/src/css/output.css --watch",
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Run Django Server",
+      "type": "shell",
+      "command": "uv run src/manage.py runserver",
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Dev: Tailwind + Django",
+      "dependsOn": ["Run Tailwind Watch", "Run Django Server"],
+      "dependsOrder": "parallel",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
