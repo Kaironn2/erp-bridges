@@ -11,3 +11,7 @@ class HomeView(LoginRequiredMixin, TemplateView):
 class CustomLoginView(LoginView):
     template_name = 'core/login.html'
     success_url = reverse_lazy('home')
+
+
+class TestView(TemplateView):
+    template_name = 'core/logout.html'
