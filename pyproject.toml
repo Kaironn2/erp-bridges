@@ -26,9 +26,9 @@ preview = true
 quote-style = 'single'
 
 [tool.taskipy.tasks]
-run = 'uv run manage.py runserver'
+run = 'uv run src/manage.py runserver'
 startapp = 'uv run manage.py startapp'
-migrate = 'uv run manage.py migrate'
-makemigrations = 'uv run manage.py makemigrations'
-collectstatic = 'uv run manage.py collectstatic --noinput'
-superuser = 'uv run manage.py createsuperuser'
+migrate = 'uv run src/manage.py migrate'
+makemigrations = 'uv run src/manage.py makemigrations'
+collectstatic = 'uv run src/manage.py collectstatic --noinput'
+superuser = 'uv run src/manage.py createsuperuser'
