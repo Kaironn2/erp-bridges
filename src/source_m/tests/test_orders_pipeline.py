@@ -33,5 +33,5 @@ def test_pipeline_with_mocked_data():
     result_df = pipeline.run()
 
     assert not result_df.empty
-    assert 'número cpf/cnpj' in result_df.columns
-    assert result_df['número cpf/cnpj'].iloc[0] == '12345678900'
+    assert 'cpf' in result_df.columns
+    assert result_df['cpf'].iloc[0] == '12345678900'
