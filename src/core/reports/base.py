@@ -1,9 +1,11 @@
 from abc import ABC, abstractmethod
 
+import pandas as pd
+
 
 class BaseReportHandler(ABC):
     def __init__(self, raw_data):
-        self.raw_data = raw_data
+        self.raw_data: pd.DataFrame = raw_data
 
     def handle(self):
         self.preprocess()

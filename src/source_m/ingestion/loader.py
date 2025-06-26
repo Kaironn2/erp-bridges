@@ -3,8 +3,8 @@ import pandas as pd
 from core.utils.parsers import xml_2003_parser
 
 LOADERS = {
-    'customers': xml_2003_parser,
-    'orders': xml_2003_parser,
+    'source_m_customers': xml_2003_parser,
+    'source_m_orders': xml_2003_parser,
 }
 
 

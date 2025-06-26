@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "django>=5.2.1",
     "pandas>=2.3.0",
+    "pytest>=8.4.1",
 ]
 
 [dependency-groups]
@@ -15,7 +16,6 @@ dev = [
 ]
 
 [tool.ruff]
-line-length = 79
 extend-exclude = ['migrations', 'settings.py', 'manage.py']
 
 [tool.ruff.lint]
@@ -33,3 +33,7 @@ migrate = 'uv run src/manage.py migrate'
 makemigrations = 'uv run src/manage.py makemigrations'
 collectstatic = 'uv run src/manage.py collectstatic --noinput'
 superuser = 'uv run src/manage.py createsuperuser'
+
+[tool.pytest.ini_options]
+pythonpath = 'src'
+addopts = '-p no:warnings'
