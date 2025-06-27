@@ -1,10 +1,12 @@
 import pandas as pd
+import pytest
 
 from source_m.ingestion.loader import LOADERS
 from source_m.ingestion.pipeline import SourceMPipeline
 from source_m.reports.orders_report import OrdersReportHandler  # noqa: F401
 
 
+@pytest.mark.django_db
 def test_pipeline_with_mocked_data():
     df = pd.DataFrame({
         'Pedido #': ['123'],
@@ -14,7 +16,7 @@ def test_pipeline_with_mocked_data():
         'Email': ['joao@email.com'],
         'Grupo do Cliente': ['Varejo'],
         'Número CPF/CNPJ': ['123.456.789-00'],
-        'Comprado em': ['2024-06-01'],
+        'Comprado em': ['26/06/2025 12:00:00'],
         'Shipping Telephone': ['(11) 91234-5678'],
         'Status': ['Enviado'],
         'Número do Rastreador': ['BR123456789'],

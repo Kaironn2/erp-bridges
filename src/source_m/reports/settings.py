@@ -2,8 +2,8 @@ class OrdersReportHandlerSettings:
     columns_mapping = {
         'pedido #': 'buy_order',
         'id do pedido': 'buy_order_external_id',
-        'firstname': 'firstname',
-        'lastname': 'lastname',
+        'firstname': 'first_name',
+        'lastname': 'last_name',
         'email': 'email',
         'grupo do cliente': 'customer_group',
         'número cpf/cnpj': 'cpf',
