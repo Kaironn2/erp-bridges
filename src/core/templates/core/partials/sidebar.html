@@ -1,38 +1,44 @@
 {% load static %}
-<aside class="w-64 bg-white text-black flex flex-col shadow-md" x-data="{ openMenu: null }">
+<aside 
+    class="w-64 h-screen bg-black-pearl text-text-primary flex flex-col border-r border-slate-border shadow-lg"
+    x-data="{ openMenu: null }"
+>
 
-    <!-- Title -->
-    <div class="p-6 flex items-center gap-3 text-xl font-bold bg-violet-700 text-white border-b-2 border-violet-900 shadow-lg">
-        <img src="{% static 'img/logos/erp-bridges.svg' %}" alt="Logo" class="h-8 w-auto">
+    <!-- Header -->
+    <div class="flex items-center gap-3 px-6 py-4 text-lg font-semibold text-text-primary shadow-md border-b border-white/10">
+        <img src="{% static 'core/img/logos/erp-bridges.svg' %}" alt="Logo" class="h-8 w-auto">
         <span>ERP Bridges</span>
     </div>
 
-    <nav class="flex-1 overflow-visible p-4 space-y-2">
+    <!-- Navigation -->
+    <nav class="flex-1 p-4 space-y-4 text-sm">
 
-        <!-- Source A -->
+        <!-- Accordion Item -->
         <div>
-            
             <button
                 @click="openMenu === 1 ? openMenu = null : openMenu = 1"
-                class="w-full flex justify-between items-center px-4 py-2 rounded hover:text-violet-600 transition"
+                class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-slate-border transition"
             >
-                <span>Source M</span>
+                <span class="font-medium">Source M</span>
                 <svg
-                    :class="{ '-rotate-90': openMenu === 1 }"
-                    class="h-4 w-4 transform transition-transform"
+                    :class="{ 'rotate-180': openMenu === 1 }"
+                    class="h-4 w-4 transform transition-transform duration-200"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                 >
-                    <path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
 
-            <div x-show="openMenu === 1" x-collapse class="pl-6 mt-2 space-y-1 overflow-hidden">
-                <a href="#" class="block px-2 py-1 rounded hover:text-violet-600">Clientes</a>
-                <a href="#" class="block px-2 py-1 rounded hover:text-violet-600">Ordens de Compra</a>
+            <div 
+                x-show="openMenu === 1"
+                x-collapse
+                class="mt-2 pl-4 space-y-1 text-sm text-text-muted"
+            >
+                <a href="#" class="block px-2 py-1 rounded hover:text-deep-violet">Clientes</a>
+                <a href="#" class="block px-2 py-1 rounded hover:text-deep-violet">Ordens de Compra</a>
             </div>
-
         </div>
 
     </nav>

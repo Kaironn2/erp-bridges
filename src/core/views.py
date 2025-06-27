@@ -14,4 +14,4 @@ class CustomLoginView(LoginView):
 
 
 class TestView(TemplateView):
-    template_name = 'core/test.html'
+    template_name = 'core/base.html'
