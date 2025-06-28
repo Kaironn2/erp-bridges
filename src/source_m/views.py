@@ -1,14 +1,13 @@
 import io
 
 from django.core.paginator import Paginator
-from django.db.models import CharField, Value
-from django.db.models.functions import Concat
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.utils.encoding import smart_str
 from django.views.generic import View
 from openpyxl import Workbook
 
+from source_m.filters import filter_customers
 from source_m.models import Customer
 
 
@@ -18,20 +17,7 @@ class CustomerListExportView(View):
         if request.GET.get('export') == '1':
             return self.export_xlsx(request=request)
 
-        name = request.GET.get('name')
-        customer_group = request.GET.get('customer_group')
-
-        queryset = Customer.objects.all()
-
-        if name:
-            queryset = queryset.annotate(
-                full_name=Concat(
-                    'first_name', Value(' '), 'last_name', output_field=CharField()
-                )
-            ).filter(full_name__icontains=name)
-
-        if customer_group:
-            queryset = queryset.filter(customer_group=customer_group)
+        queryset = filter_customers(Customer.objects.all(), request.GET)
 
         paginator = Paginator(queryset, 15)
         page_number = request.GET.get('page')
@@ -48,20 +34,7 @@ class CustomerListExportView(View):
         return render(request, 'source_m/customers-list.html', context)
 
     def export_xlsx(self, request: HttpRequest) -> HttpResponse:
-        name = request.GET.get('name')
-        customer_group = request.GET.get('customer_group')
-
-        queryset = Customer.objects.all()
-
-        if name:
-            queryset = queryset.annotate(
-                full_name=Concat(
-                    'first_name', Value(' '), 'last_name', output_field=CharField()
-                )
-            ).filter(full_name__icontains=name)
-
-        if customer_group:
-            queryset = queryset.filter(customer_group=customer_group)
+        queryset = filter_customers(Customer.objects.all(), request.GET)
 
         wb = Workbook()
         ws = wb.active
