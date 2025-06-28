@@ -58,9 +58,8 @@
 
     </form>
 
-    <!-- tabela estilo tabela real -->
+    <!-- table -->
     <div class="flex flex-col gap-1 text-sm font-medium">
-        <!-- cabeçalho -->
         <div class="grid grid-cols-[2fr_3fr_1.5fr_1.5fr_2fr] bg-black-pearl/50 text-text-muted px-4 py-3 rounded-md border border-slate-border uppercase tracking-wide text-xs">
             <div class="text-left">Nome</div>
             <div class="text-left">E-mail</div>
@@ -69,7 +68,6 @@
             <div class="text-left">Telefone</div>
         </div>
 
-        <!-- linhas -->
         {% for customer in page_obj %}
             <div class="grid grid-cols-[2fr_3fr_1.5fr_1.5fr_2fr] px-4 py-3 rounded-md border border-slate-border bg-black-pearl/50 hover:bg-black-pearl/70 transition">
                 <div class="text-left">{{ customer.first_name }} {{ customer.last_name }}</div>
