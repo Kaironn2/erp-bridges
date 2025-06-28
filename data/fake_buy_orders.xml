@@ -1,0 +1,1003 @@
+<?xml version="1.0"?><?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:x="urn:schemas-microsoft-com:office:excel"
+    xmlns:x2="http://schemas.microsoft.com/office/excel/2003/xml"
+    xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+    xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:html="http://www.w3.org/TR/REC-html40"
+    xmlns:c="urn:schemas-microsoft-com:office:component:spreadsheet">
+    <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office"></OfficeDocumentSettings>
+    <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel"></ExcelWorkbook>
+    <Worksheet ss:Name="Sheet 1">
+        <Table>
+            <Row>
+                <Cell><Data ss:Type="String">Pedido #</Data></Cell>
+                <Cell><Data ss:Type="String">ID do Pedido</Data></Cell>
+                <Cell><Data ss:Type="String">Firstname</Data></Cell>
+                <Cell><Data ss:Type="String">Lastname</Data></Cell>
+                <Cell><Data ss:Type="String">Email</Data></Cell>
+                <Cell><Data ss:Type="String">Grupo do Cliente</Data></Cell>
+                <Cell><Data ss:Type="String">N&#xFA;mero CPF/CNPJ</Data></Cell>
+                <Cell><Data ss:Type="String">Comprado Em</Data></Cell>
+                <Cell><Data ss:Type="String">Shipping Telephone</Data></Cell>
+                <Cell><Data ss:Type="String">Status</Data></Cell>
+                <Cell><Data ss:Type="String">N&#xFA;mero do Rastreador</Data></Cell>
+                <Cell><Data ss:Type="String">Qtd. Vendida</Data></Cell>
+                <Cell><Data ss:Type="String">Frete</Data></Cell>
+                <Cell><Data ss:Type="String">Desconto</Data></Cell>
+                <Cell><Data ss:Type="String">Payment Type</Data></Cell>
+                <Cell><Data ss:Type="String">Total da Venda</Data></Cell>
+            </Row>
+
+            <Row>
+                <Cell><Data ss:Type="Number">100264150</Data></Cell>
+                <Cell><Data ss:Type="Number">316582</Data></Cell>
+                <Cell><Data ss:Type="String">Mariana</Data></Cell>
+                <Cell><Data ss:Type="String">Costa</Data></Cell>
+                <Cell><Data ss:Type="String">erickda-cunha@bol.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">316.489.052-42</Data></Cell>
+                <Cell><Data ss:Type="String">22/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(011) 2111-0606</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$26,55</Data></Cell>
+                <Cell><Data ss:Type="String">R$1,81</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$231,34</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264151</Data></Cell>
+                <Cell><Data ss:Type="Number">316583</Data></Cell>
+                <Cell><Data ss:Type="String">Benjamin</Data></Cell>
+                <Cell><Data ss:Type="String">Viana</Data></Cell>
+                <Cell><Data ss:Type="String">miguelsouza@da.net</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">058.416.927-20</Data></Cell>
+                <Cell><Data ss:Type="String">16/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(084) 7655 7032</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$21,79</Data></Cell>
+                <Cell><Data ss:Type="String">R$2,08</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$180,83</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264152</Data></Cell>
+                <Cell><Data ss:Type="Number">316584</Data></Cell>
+                <Cell><Data ss:Type="String">Stella</Data></Cell>
+                <Cell><Data ss:Type="String">da Cruz</Data></Cell>
+                <Cell><Data ss:Type="String">jmartins@santos.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">284.931.057-32</Data></Cell>
+                <Cell><Data ss:Type="String">07/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (061) 3587-1588</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR287968994</Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$18,33</Data></Cell>
+                <Cell><Data ss:Type="String">R$1,84</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$267,42</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264153</Data></Cell>
+                <Cell><Data ss:Type="Number">316585</Data></Cell>
+                <Cell><Data ss:Type="String">Augusto</Data></Cell>
+                <Cell><Data ss:Type="String">da Costa</Data></Cell>
+                <Cell><Data ss:Type="String">bfernandes@ig.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">685.091.473-10</Data></Cell>
+                <Cell><Data ss:Type="String">15/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(081) 5792-8773</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$13,08</Data></Cell>
+                <Cell><Data ss:Type="String">R$10,39</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$183,84</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264154</Data></Cell>
+                <Cell><Data ss:Type="Number">316586</Data></Cell>
+                <Cell><Data ss:Type="String">Fernanda</Data></Cell>
+                <Cell><Data ss:Type="String">Moreira</Data></Cell>
+                <Cell><Data ss:Type="String">maria-clara08@gmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">762.849.305-00</Data></Cell>
+                <Cell><Data ss:Type="String">16/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(021) 1843 2786</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR567264865</Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$23,05</Data></Cell>
+                <Cell><Data ss:Type="String">R$1,14</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$73,05</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264155</Data></Cell>
+                <Cell><Data ss:Type="Number">316587</Data></Cell>
+                <Cell><Data ss:Type="String">Ana Lívia</Data></Cell>
+                <Cell><Data ss:Type="String">Monteiro</Data></Cell>
+                <Cell><Data ss:Type="String">oliviaoliveira@uol.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">893.741.260-87</Data></Cell>
+                <Cell><Data ss:Type="String">13/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (051) 2393-8700</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR707457056</Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$27,49</Data></Cell>
+                <Cell><Data ss:Type="String">R$4,00</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$56,58</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264156</Data></Cell>
+                <Cell><Data ss:Type="Number">316588</Data></Cell>
+                <Cell><Data ss:Type="String">Emanuelly</Data></Cell>
+                <Cell><Data ss:Type="String">Azevedo</Data></Cell>
+                <Cell><Data ss:Type="String">heitor22@hotmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">091.387.264-40</Data></Cell>
+                <Cell><Data ss:Type="String">10/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">81 6988-7665</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$26,18</Data></Cell>
+                <Cell><Data ss:Type="String">R$7,75</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$96,96</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264157</Data></Cell>
+                <Cell><Data ss:Type="Number">316589</Data></Cell>
+                <Cell><Data ss:Type="String">Ana Clara</Data></Cell>
+                <Cell><Data ss:Type="String">Silveira</Data></Cell>
+                <Cell><Data ss:Type="String">qmartins@moreira.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">081.573.269-40</Data></Cell>
+                <Cell><Data ss:Type="String">24/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 11 0190 2339</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$11,19</Data></Cell>
+                <Cell><Data ss:Type="String">R$3,26</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$177,19</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264158</Data></Cell>
+                <Cell><Data ss:Type="Number">316590</Data></Cell>
+                <Cell><Data ss:Type="String">Vinicius</Data></Cell>
+                <Cell><Data ss:Type="String">Cunha</Data></Cell>
+                <Cell><Data ss:Type="String">yferreira@hotmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">749.068.351-39</Data></Cell>
+                <Cell><Data ss:Type="String">02/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (011) 1062-7333</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$10,73</Data></Cell>
+                <Cell><Data ss:Type="String">R$1,76</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$237,10</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264159</Data></Cell>
+                <Cell><Data ss:Type="Number">316591</Data></Cell>
+                <Cell><Data ss:Type="String">Gustavo</Data></Cell>
+                <Cell><Data ss:Type="String">Monteiro</Data></Cell>
+                <Cell><Data ss:Type="String">helenacosta@ig.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">685.974.201-11</Data></Cell>
+                <Cell><Data ss:Type="String">09/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 41 4194 4276</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$29,02</Data></Cell>
+                <Cell><Data ss:Type="String">R$6,83</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$53,63</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264160</Data></Cell>
+                <Cell><Data ss:Type="Number">316592</Data></Cell>
+                <Cell><Data ss:Type="String">Arthur</Data></Cell>
+                <Cell><Data ss:Type="String">Souza</Data></Cell>
+                <Cell><Data ss:Type="String">ccarvalho@uol.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">287.964.130-69</Data></Cell>
+                <Cell><Data ss:Type="String">07/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(061) 3745-9880</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$11,76</Data></Cell>
+                <Cell><Data ss:Type="String">R$9,07</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$54,80</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264161</Data></Cell>
+                <Cell><Data ss:Type="Number">316593</Data></Cell>
+                <Cell><Data ss:Type="String">Pedro</Data></Cell>
+                <Cell><Data ss:Type="String">da Conceição</Data></Cell>
+                <Cell><Data ss:Type="String">enrico99@moura.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">624.951.380-98</Data></Cell>
+                <Cell><Data ss:Type="String">26/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">21 5375-4431</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR538763129</Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$18,97</Data></Cell>
+                <Cell><Data ss:Type="String">R$9,29</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$257,83</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264162</Data></Cell>
+                <Cell><Data ss:Type="Number">316594</Data></Cell>
+                <Cell><Data ss:Type="String">Alexandre</Data></Cell>
+                <Cell><Data ss:Type="String">Alves</Data></Cell>
+                <Cell><Data ss:Type="String">nathanviana@pires.net</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">479.360.518-48</Data></Cell>
+                <Cell><Data ss:Type="String">14/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 21 0685-0197</Data></Cell>
+                <Cell><Data ss:Type="String">Enviado</Data></Cell>
+                <Cell><Data ss:Type="String">BR998757722</Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$29,51</Data></Cell>
+                <Cell><Data ss:Type="String">R$4,57</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$53,19</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264163</Data></Cell>
+                <Cell><Data ss:Type="Number">316595</Data></Cell>
+                <Cell><Data ss:Type="String">Enzo</Data></Cell>
+                <Cell><Data ss:Type="String">Pires</Data></Cell>
+                <Cell><Data ss:Type="String">da-conceicaojoao@gmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">319.504.876-01</Data></Cell>
+                <Cell><Data ss:Type="String">20/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (071) 8864-5847</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$21,95</Data></Cell>
+                <Cell><Data ss:Type="String">R$11,12</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$54,50</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264164</Data></Cell>
+                <Cell><Data ss:Type="Number">316596</Data></Cell>
+                <Cell><Data ss:Type="String">Thomas</Data></Cell>
+                <Cell><Data ss:Type="String">Pereira</Data></Cell>
+                <Cell><Data ss:Type="String">bda-mata@ig.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">317.650.294-06</Data></Cell>
+                <Cell><Data ss:Type="String">31/05/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">0900-221-3291</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR544795475</Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$24,81</Data></Cell>
+                <Cell><Data ss:Type="String">R$3,06</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$111,80</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264165</Data></Cell>
+                <Cell><Data ss:Type="Number">316597</Data></Cell>
+                <Cell><Data ss:Type="String">Larissa</Data></Cell>
+                <Cell><Data ss:Type="String">Aragão</Data></Cell>
+                <Cell><Data ss:Type="String">limacaua@hotmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">740.163.529-16</Data></Cell>
+                <Cell><Data ss:Type="String">30/05/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(081) 0391 5449</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$15,46</Data></Cell>
+                <Cell><Data ss:Type="String">R$6,47</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$251,88</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264166</Data></Cell>
+                <Cell><Data ss:Type="Number">316598</Data></Cell>
+                <Cell><Data ss:Type="String">Alexia</Data></Cell>
+                <Cell><Data ss:Type="String">Moreira</Data></Cell>
+                <Cell><Data ss:Type="String">yago08@bol.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">642.819.705-76</Data></Cell>
+                <Cell><Data ss:Type="String">17/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">0900 039 3428</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR021748287</Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$29,02</Data></Cell>
+                <Cell><Data ss:Type="String">R$11,88</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$95,20</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264167</Data></Cell>
+                <Cell><Data ss:Type="Number">316599</Data></Cell>
+                <Cell><Data ss:Type="String">Lucas</Data></Cell>
+                <Cell><Data ss:Type="String">Martins</Data></Cell>
+                <Cell><Data ss:Type="String">da-motabenjamin@hotmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">750.186.243-53</Data></Cell>
+                <Cell><Data ss:Type="String">19/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 81 7398 7194</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR950154977</Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$18,33</Data></Cell>
+                <Cell><Data ss:Type="String">R$11,98</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$229,52</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264168</Data></Cell>
+                <Cell><Data ss:Type="Number">316600</Data></Cell>
+                <Cell><Data ss:Type="String">Amanda</Data></Cell>
+                <Cell><Data ss:Type="String">da Costa</Data></Cell>
+                <Cell><Data ss:Type="String">da-matalucas@viana.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">372.804.619-13</Data></Cell>
+                <Cell><Data ss:Type="String">13/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 71 7022-9110</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR684833485</Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$20,26</Data></Cell>
+                <Cell><Data ss:Type="String">R$9,20</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$206,16</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264169</Data></Cell>
+                <Cell><Data ss:Type="Number">316601</Data></Cell>
+                <Cell><Data ss:Type="String">Heloísa</Data></Cell>
+                <Cell><Data ss:Type="String">Gonçalves</Data></Cell>
+                <Cell><Data ss:Type="String">ncosta@bol.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">741.209.865-94</Data></Cell>
+                <Cell><Data ss:Type="String">23/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">0900 960 0585</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$24,34</Data></Cell>
+                <Cell><Data ss:Type="String">R$5,83</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$136,57</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264170</Data></Cell>
+                <Cell><Data ss:Type="Number">316602</Data></Cell>
+                <Cell><Data ss:Type="String">Enrico</Data></Cell>
+                <Cell><Data ss:Type="String">Silva</Data></Cell>
+                <Cell><Data ss:Type="String">enrico72@peixoto.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">094.287.613-03</Data></Cell>
+                <Cell><Data ss:Type="String">02/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(031) 9737-3979</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$20,41</Data></Cell>
+                <Cell><Data ss:Type="String">R$6,81</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$163,19</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264171</Data></Cell>
+                <Cell><Data ss:Type="Number">316603</Data></Cell>
+                <Cell><Data ss:Type="String">Alice</Data></Cell>
+                <Cell><Data ss:Type="String">Fernandes</Data></Cell>
+                <Cell><Data ss:Type="String">sophiada-conceicao@sales.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">915.340.672-99</Data></Cell>
+                <Cell><Data ss:Type="String">14/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (041) 3202 6659</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$14,29</Data></Cell>
+                <Cell><Data ss:Type="String">R$5,59</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$225,31</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264172</Data></Cell>
+                <Cell><Data ss:Type="Number">316604</Data></Cell>
+                <Cell><Data ss:Type="String">Sarah</Data></Cell>
+                <Cell><Data ss:Type="String">Ramos</Data></Cell>
+                <Cell><Data ss:Type="String">teixeiraisis@gmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">027.319.548-41</Data></Cell>
+                <Cell><Data ss:Type="String">16/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">0500-608-3550</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$28,93</Data></Cell>
+                <Cell><Data ss:Type="String">R$6,95</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$270,30</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264173</Data></Cell>
+                <Cell><Data ss:Type="Number">316605</Data></Cell>
+                <Cell><Data ss:Type="String">Vicente</Data></Cell>
+                <Cell><Data ss:Type="String">Vieira</Data></Cell>
+                <Cell><Data ss:Type="String">bmelo@gmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">641.795.382-37</Data></Cell>
+                <Cell><Data ss:Type="String">08/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">51 1417 6416</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR181168496</Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$18,56</Data></Cell>
+                <Cell><Data ss:Type="String">R$7,93</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$230,30</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264174</Data></Cell>
+                <Cell><Data ss:Type="Number">316606</Data></Cell>
+                <Cell><Data ss:Type="String">Ana Clara</Data></Cell>
+                <Cell><Data ss:Type="String">Teixeira</Data></Cell>
+                <Cell><Data ss:Type="String">ana-vitoria50@ramos.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">406.253.187-90</Data></Cell>
+                <Cell><Data ss:Type="String">24/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">81 4979 0299</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR721215499</Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$19,01</Data></Cell>
+                <Cell><Data ss:Type="String">R$8,34</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$129,12</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264175</Data></Cell>
+                <Cell><Data ss:Type="Number">316607</Data></Cell>
+                <Cell><Data ss:Type="String">Amanda</Data></Cell>
+                <Cell><Data ss:Type="String">Novaes</Data></Cell>
+                <Cell><Data ss:Type="String">pauloaraujo@cavalcanti.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">281.906.573-21</Data></Cell>
+                <Cell><Data ss:Type="String">24/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(041) 0724 0911</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$14,96</Data></Cell>
+                <Cell><Data ss:Type="String">R$3,79</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$204,66</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264176</Data></Cell>
+                <Cell><Data ss:Type="Number">316608</Data></Cell>
+                <Cell><Data ss:Type="String">Emanuelly</Data></Cell>
+                <Cell><Data ss:Type="String">Cunha</Data></Cell>
+                <Cell><Data ss:Type="String">vieiraluiz-otavio@bol.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">073.268.951-12</Data></Cell>
+                <Cell><Data ss:Type="String">31/05/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">71 5405-6973</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$13,25</Data></Cell>
+                <Cell><Data ss:Type="String">R$11,86</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$68,18</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264177</Data></Cell>
+                <Cell><Data ss:Type="Number">316609</Data></Cell>
+                <Cell><Data ss:Type="String">Lara</Data></Cell>
+                <Cell><Data ss:Type="String">da Luz</Data></Cell>
+                <Cell><Data ss:Type="String">ceciliadias@monteiro.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">268.094.351-15</Data></Cell>
+                <Cell><Data ss:Type="String">05/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (051) 8085-4394</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$18,48</Data></Cell>
+                <Cell><Data ss:Type="String">R$4,66</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$229,45</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264178</Data></Cell>
+                <Cell><Data ss:Type="Number">316610</Data></Cell>
+                <Cell><Data ss:Type="String">Murilo</Data></Cell>
+                <Cell><Data ss:Type="String">Nogueira</Data></Cell>
+                <Cell><Data ss:Type="String">aoliveira@porto.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">086.534.179-66</Data></Cell>
+                <Cell><Data ss:Type="String">09/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (021) 2503 1131</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$17,15</Data></Cell>
+                <Cell><Data ss:Type="String">R$7,64</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$54,38</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264179</Data></Cell>
+                <Cell><Data ss:Type="Number">316611</Data></Cell>
+                <Cell><Data ss:Type="String">Vitória</Data></Cell>
+                <Cell><Data ss:Type="String">Ferreira</Data></Cell>
+                <Cell><Data ss:Type="String">pmoura@ribeiro.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">241.895.307-60</Data></Cell>
+                <Cell><Data ss:Type="String">23/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (061) 6506-9366</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$20,99</Data></Cell>
+                <Cell><Data ss:Type="String">R$5,39</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$115,31</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264180</Data></Cell>
+                <Cell><Data ss:Type="Number">316612</Data></Cell>
+                <Cell><Data ss:Type="String">Daniel</Data></Cell>
+                <Cell><Data ss:Type="String">Rocha</Data></Cell>
+                <Cell><Data ss:Type="String">joao-miguel61@uol.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">253.467.180-44</Data></Cell>
+                <Cell><Data ss:Type="String">12/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">0800 263 0414</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$22,40</Data></Cell>
+                <Cell><Data ss:Type="String">R$14,44</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$123,92</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264181</Data></Cell>
+                <Cell><Data ss:Type="Number">316613</Data></Cell>
+                <Cell><Data ss:Type="String">Otávio</Data></Cell>
+                <Cell><Data ss:Type="String">Fernandes</Data></Cell>
+                <Cell><Data ss:Type="String">maria-alicedias@hotmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">361.790.528-59</Data></Cell>
+                <Cell><Data ss:Type="String">03/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">0900 900 3029</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$18,36</Data></Cell>
+                <Cell><Data ss:Type="String">R$6,63</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$274,74</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264182</Data></Cell>
+                <Cell><Data ss:Type="Number">316614</Data></Cell>
+                <Cell><Data ss:Type="String">Pedro Henrique</Data></Cell>
+                <Cell><Data ss:Type="String">Gomes</Data></Cell>
+                <Cell><Data ss:Type="String">silveiramaria@porto.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">476.283.015-17</Data></Cell>
+                <Cell><Data ss:Type="String">12/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">0300 573 1978</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR329885602</Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$18,42</Data></Cell>
+                <Cell><Data ss:Type="String">R$4,06</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$73,16</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264183</Data></Cell>
+                <Cell><Data ss:Type="Number">316615</Data></Cell>
+                <Cell><Data ss:Type="String">Ana Lívia</Data></Cell>
+                <Cell><Data ss:Type="String">Jesus</Data></Cell>
+                <Cell><Data ss:Type="String">jdas-neves@hotmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">879.125.043-97</Data></Cell>
+                <Cell><Data ss:Type="String">03/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(051) 1215-1235</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$15,98</Data></Cell>
+                <Cell><Data ss:Type="String">R$8,21</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$298,74</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264184</Data></Cell>
+                <Cell><Data ss:Type="Number">316616</Data></Cell>
+                <Cell><Data ss:Type="String">Luiz Henrique</Data></Cell>
+                <Cell><Data ss:Type="String">Lima</Data></Cell>
+                <Cell><Data ss:Type="String">pereiraheloisa@teixeira.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">429.563.807-29</Data></Cell>
+                <Cell><Data ss:Type="String">10/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">81 9367-1402</Data></Cell>
+                <Cell><Data ss:Type="String">Enviado</Data></Cell>
+                <Cell><Data ss:Type="String">BR345325019</Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$23,68</Data></Cell>
+                <Cell><Data ss:Type="String">R$7,34</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$266,70</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264185</Data></Cell>
+                <Cell><Data ss:Type="Number">316617</Data></Cell>
+                <Cell><Data ss:Type="String">Bárbara</Data></Cell>
+                <Cell><Data ss:Type="String">Almeida</Data></Cell>
+                <Cell><Data ss:Type="String">pereirapietra@martins.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">498.325.176-64</Data></Cell>
+                <Cell><Data ss:Type="String">22/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(081) 9918-1071</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR542684615</Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$28,88</Data></Cell>
+                <Cell><Data ss:Type="String">R$3,43</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$251,41</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264186</Data></Cell>
+                <Cell><Data ss:Type="Number">316618</Data></Cell>
+                <Cell><Data ss:Type="String">Milena</Data></Cell>
+                <Cell><Data ss:Type="String">Moura</Data></Cell>
+                <Cell><Data ss:Type="String">hlopes@viana.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">196.785.402-58</Data></Cell>
+                <Cell><Data ss:Type="String">25/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">81 4938 9205</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$12,54</Data></Cell>
+                <Cell><Data ss:Type="String">R$1,59</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$115,15</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264187</Data></Cell>
+                <Cell><Data ss:Type="Number">316619</Data></Cell>
+                <Cell><Data ss:Type="String">Maria Alice</Data></Cell>
+                <Cell><Data ss:Type="String">Barros</Data></Cell>
+                <Cell><Data ss:Type="String">gustavoporto@freitas.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">951.740.632-07</Data></Cell>
+                <Cell><Data ss:Type="String">24/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">21 5705 3853</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$26,26</Data></Cell>
+                <Cell><Data ss:Type="String">R$13,38</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$65,93</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264188</Data></Cell>
+                <Cell><Data ss:Type="Number">316620</Data></Cell>
+                <Cell><Data ss:Type="String">Pedro</Data></Cell>
+                <Cell><Data ss:Type="String">Ribeiro</Data></Cell>
+                <Cell><Data ss:Type="String">eduardaduarte@peixoto.net</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">837.259.610-77</Data></Cell>
+                <Cell><Data ss:Type="String">05/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">84 6906-5631</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$18,19</Data></Cell>
+                <Cell><Data ss:Type="String">R$1,18</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$290,11</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264189</Data></Cell>
+                <Cell><Data ss:Type="Number">316621</Data></Cell>
+                <Cell><Data ss:Type="String">Sophie</Data></Cell>
+                <Cell><Data ss:Type="String">Costa</Data></Cell>
+                <Cell><Data ss:Type="String">da-luznicolas@souza.net</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">870.196.325-21</Data></Cell>
+                <Cell><Data ss:Type="String">05/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">0800-104-5156</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$26,95</Data></Cell>
+                <Cell><Data ss:Type="String">R$7,48</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$77,13</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264190</Data></Cell>
+                <Cell><Data ss:Type="Number">316622</Data></Cell>
+                <Cell><Data ss:Type="String">Lorena</Data></Cell>
+                <Cell><Data ss:Type="String">Pinto</Data></Cell>
+                <Cell><Data ss:Type="String">olivialopes@jesus.org</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">547.026.813-62</Data></Cell>
+                <Cell><Data ss:Type="String">15/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (041) 2618-2668</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$20,29</Data></Cell>
+                <Cell><Data ss:Type="String">R$6,67</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$299,39</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264191</Data></Cell>
+                <Cell><Data ss:Type="Number">316623</Data></Cell>
+                <Cell><Data ss:Type="String">Anthony</Data></Cell>
+                <Cell><Data ss:Type="String">Cardoso</Data></Cell>
+                <Cell><Data ss:Type="String">yfogaca@yahoo.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">458.263.791-46</Data></Cell>
+                <Cell><Data ss:Type="String">11/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">21 7510 0730</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$15,02</Data></Cell>
+                <Cell><Data ss:Type="String">R$11,41</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$65,07</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264192</Data></Cell>
+                <Cell><Data ss:Type="Number">316624</Data></Cell>
+                <Cell><Data ss:Type="String">Maria Fernanda</Data></Cell>
+                <Cell><Data ss:Type="String">Fernandes</Data></Cell>
+                <Cell><Data ss:Type="String">emanuel49@da.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">574.601.389-75</Data></Cell>
+                <Cell><Data ss:Type="String">05/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">(084) 4202-7534</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR776813379</Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$12,41</Data></Cell>
+                <Cell><Data ss:Type="String">R$13,22</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$240,85</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264193</Data></Cell>
+                <Cell><Data ss:Type="Number">316625</Data></Cell>
+                <Cell><Data ss:Type="String">Luiza</Data></Cell>
+                <Cell><Data ss:Type="String">Jesus</Data></Cell>
+                <Cell><Data ss:Type="String">sofiasantos@yahoo.com.br</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">762.405.391-80</Data></Cell>
+                <Cell><Data ss:Type="String">09/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">51 3091 5328</Data></Cell>
+                <Cell><Data ss:Type="String">Processando</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$26,76</Data></Cell>
+                <Cell><Data ss:Type="String">R$0,75</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$109,39</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264194</Data></Cell>
+                <Cell><Data ss:Type="Number">316626</Data></Cell>
+                <Cell><Data ss:Type="String">Augusto</Data></Cell>
+                <Cell><Data ss:Type="String">Nogueira</Data></Cell>
+                <Cell><Data ss:Type="String">raquelgoncalves@silveira.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">732.901.568-77</Data></Cell>
+                <Cell><Data ss:Type="String">01/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (081) 0205-4837</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$22,63</Data></Cell>
+                <Cell><Data ss:Type="String">R$7,62</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$138,46</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264195</Data></Cell>
+                <Cell><Data ss:Type="Number">316627</Data></Cell>
+                <Cell><Data ss:Type="String">Gustavo Henrique</Data></Cell>
+                <Cell><Data ss:Type="String">Costela</Data></Cell>
+                <Cell><Data ss:Type="String">moreirapietra@gmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">130.564.279-16</Data></Cell>
+                <Cell><Data ss:Type="String">28/05/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 81 9507 7676</Data></Cell>
+                <Cell><Data ss:Type="String">Cancelado</Data></Cell>
+                <Cell><Data ss:Type="String"></Data></Cell>
+                <Cell><Data ss:Type="Number">3</Data></Cell>
+                <Cell><Data ss:Type="String">R$12,97</Data></Cell>
+                <Cell><Data ss:Type="String">R$8,09</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$209,10</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264196</Data></Cell>
+                <Cell><Data ss:Type="Number">316628</Data></Cell>
+                <Cell><Data ss:Type="String">Carlos Eduardo</Data></Cell>
+                <Cell><Data ss:Type="String">Duarte</Data></Cell>
+                <Cell><Data ss:Type="String">theo02@almeida.org</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">062.589.734-00</Data></Cell>
+                <Cell><Data ss:Type="String">05/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (084) 8423-9713</Data></Cell>
+                <Cell><Data ss:Type="String">Enviado</Data></Cell>
+                <Cell><Data ss:Type="String">BR488798838</Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$16,19</Data></Cell>
+                <Cell><Data ss:Type="String">R$1,72</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$231,88</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264197</Data></Cell>
+                <Cell><Data ss:Type="Number">316629</Data></Cell>
+                <Cell><Data ss:Type="String">Mirella</Data></Cell>
+                <Cell><Data ss:Type="String">Alves</Data></Cell>
+                <Cell><Data ss:Type="String">juliana26@hotmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">087.123.649-40</Data></Cell>
+                <Cell><Data ss:Type="String">04/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (021) 0970 5819</Data></Cell>
+                <Cell><Data ss:Type="String">Enviado</Data></Cell>
+                <Cell><Data ss:Type="String">BR070239257</Data></Cell>
+                <Cell><Data ss:Type="Number">4</Data></Cell>
+                <Cell><Data ss:Type="String">R$16,74</Data></Cell>
+                <Cell><Data ss:Type="String">R$10,61</Data></Cell>
+                <Cell><Data ss:Type="String">Pix</Data></Cell>
+                <Cell><Data ss:Type="String">R$266,64</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264198</Data></Cell>
+                <Cell><Data ss:Type="Number">316630</Data></Cell>
+                <Cell><Data ss:Type="String">Alícia</Data></Cell>
+                <Cell><Data ss:Type="String">Barros</Data></Cell>
+                <Cell><Data ss:Type="String">maysa71@freitas.org</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">209.436.817-31</Data></Cell>
+                <Cell><Data ss:Type="String">06/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">+55 (031) 3447 9268</Data></Cell>
+                <Cell><Data ss:Type="String">Entregue</Data></Cell>
+                <Cell><Data ss:Type="String">BR479615034</Data></Cell>
+                <Cell><Data ss:Type="Number">1</Data></Cell>
+                <Cell><Data ss:Type="String">R$28,06</Data></Cell>
+                <Cell><Data ss:Type="String">R$9,31</Data></Cell>
+                <Cell><Data ss:Type="String">Boleto</Data></Cell>
+                <Cell><Data ss:Type="String">R$63,34</Data></Cell>
+            </Row>
+    
+            <Row>
+                <Cell><Data ss:Type="Number">100264199</Data></Cell>
+                <Cell><Data ss:Type="Number">316631</Data></Cell>
+                <Cell><Data ss:Type="String">Bianca</Data></Cell>
+                <Cell><Data ss:Type="String">das Neves</Data></Cell>
+                <Cell><Data ss:Type="String">lucas45@vieira.com</Data></Cell>
+                <Cell><Data ss:Type="String">Comum</Data></Cell>
+                <Cell><Data ss:Type="String">108.942.763-87</Data></Cell>
+                <Cell><Data ss:Type="String">20/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">81 7055 7077</Data></Cell>
+                <Cell><Data ss:Type="String">Enviado</Data></Cell>
+                <Cell><Data ss:Type="String">BR321411296</Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$10,85</Data></Cell>
+                <Cell><Data ss:Type="String">R$10,44</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$183,94</Data></Cell>
+            </Row>
+
+            <Row>
+                <Cell><Data ss:Type="Number">100264874</Data></Cell>
+                <Cell><Data ss:Type="Number">314561</Data></Cell>
+                <Cell><Data ss:Type="String">Rafaela</Data></Cell>
+                <Cell><Data ss:Type="String">Mendes</Data></Cell>
+                <Cell><Data ss:Type="String">rafinhaa@gmail.com</Data></Cell>
+                <Cell><Data ss:Type="String">Vip</Data></Cell>
+                <Cell><Data ss:Type="String">999.888.777-66</Data></Cell>
+                <Cell><Data ss:Type="String">20/06/2025 23:05:45</Data></Cell>
+                <Cell><Data ss:Type="String">98 9 7055 7077</Data></Cell>
+                <Cell><Data ss:Type="String">Enviado</Data></Cell>
+                <Cell><Data ss:Type="String">BR321411296</Data></Cell>
+                <Cell><Data ss:Type="Number">2</Data></Cell>
+                <Cell><Data ss:Type="String">R$10,85</Data></Cell>
+                <Cell><Data ss:Type="String">R$10,44</Data></Cell>
+                <Cell><Data ss:Type="String">Cartão</Data></Cell>
+                <Cell><Data ss:Type="String">R$183,94</Data></Cell>
+            </Row>
+    
+        </Table>
+    </Worksheet>
+</Workbook>

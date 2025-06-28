@@ -36,8 +36,14 @@
                 x-collapse
                 class="mt-2 pl-4 space-y-1 text-sm text-text-muted"
             >
-                <a href="#" class="block px-2 py-1 rounded hover:text-deep-violet">Clientes</a>
-                <a href="#" class="block px-2 py-1 rounded hover:text-deep-violet">Ordens de Compra</a>
+                <a href="{% url 'source-m-customers-list' %}" class="flex items-center gap-2 px-2 py-1 rounded hover:text-deep-violet">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    Clientes
+                </a>
+                <a href="#" class="flex items-center gap-2 px-2 py-1 rounded hover:text-deep-violet">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                    Ordens de Compra
+                </a>
             </div>
         </div>
 

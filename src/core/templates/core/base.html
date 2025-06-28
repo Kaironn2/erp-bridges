@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERP Bridge</title>
+    <title>ERP Bridges</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="{% static 'core/js/tailwind.config.js' %}"></script>
     <script src="https://unpkg.com/htmx.org@1.9.2"></script>
@@ -14,11 +15,16 @@
 </head>
 <body class="flex h-screen bg-black-pearl text-black font-[lexend]">
     
-    {% include 'core/partials/sidebar.html' %}
+    {% include 'core/partials/_sidebar.html' %}
 
     <main class="flex-1 p-6 overflow-auto">
         {% block content %}{% endblock %}
     </main>
 
+    
+    {% block 'extra_js' %}
+        
+    {% endblock 'extra_js' %}
+    <script>lucide.createIcons()</script>
 </body>
 </html>

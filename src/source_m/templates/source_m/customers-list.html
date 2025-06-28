@@ -1,6 +1,95 @@
 {% extends 'core/base.html' %}
-
+{% load cpf_format %}
+{% load phone_format %}
 
 {% block content %}
-    {% include 'source_m/partials/customers-table.html' %}
+<div class="bg-midnight text-text-primary rounded-2xl p-6 m-6 shadow-lg">
+    
+    <!-- filters and buttons -->
+    <form method="get" class="flex justify-between items-end flex-wrap gap-4 mb-6">
+        
+        <!-- filtros à esquerda -->
+        <div class="flex flex-wrap items-end gap-4">
+            <div>
+                <label for="name" class="block text-sm text-text-muted">Nome</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value="{{ request.GET.name }}"
+                    class="bg-input-bg border border-input-border text-text-primary rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-faint-violet"
+                >
+            </div>
+            
+            <div>
+                <label for="customer_group" class="block text-sm text-text-muted">Grupo</label>
+                <select
+                    name="customer_group"
+                    id="customer_group"
+                    class="bg-input-bg border border-input-border text-text-primary rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-faint-violet"
+                >
+                    <option value="">Todos</option>
+                    {% for group in customer_groups %}
+                        <option value="{{ group }}" {% if request.GET.customer_group == group %}selected{% endif %}>
+                            {{ group|title }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- botões à direita -->
+        <div class="flex gap-2 ml-auto">
+            <button
+                type="submit"
+                name="export"
+                value="1"
+                class="bg-slate-border hover:bg-input-border text-white px-4 py-2 rounded-lg transition"
+            >
+                Exportar XLSX
+            </button>
+            <button
+                type="submit"
+                class="bg-deep-violet hover:bg-faint-violet text-white px-4 py-2 rounded-lg transition"
+            >
+                Pesquisar
+            </button>
+        </div>
+
+    </form>
+
+
+    <!-- table -->
+    <div class="overflow-x-auto border border-slate-border rounded-lg">
+        <table class="min-w-full text-sm">
+            <thead class="bg-input-bg border-b border-slate-border text-text-muted">
+                <tr>
+                    <th class="text-left px-4 py-2">Nome</th>
+                    <th class="text-left px-4 py-2">E-mail</th>
+                    <th class="text-left px-4 py-2">CPF</th>
+                    <th class="text-left px-4 py-2">Última Compra</th>
+                    <th class="text-left px-4 py-2">Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for customer in page_obj %}
+                    <tr class="border-b border-slate-border hover:bg-black-pearl/50 odd:bg-input-bg/40">
+                        <td class="px-4 py-2">{{ customer.first_name }} {{ customer.last_name }}</td>
+                        <td class="px-4 py-2">{{ customer.email }}</td>
+                        <td class="px-4 py-2">{{ customer.cpf|format_cpf }}</td>
+                        <td class="px-4 py-2">{{ customer.last_order|date:"d/m/Y" }}</td>
+                        <td class="px-4 py-2">{{ customer.phone|format_phone }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3" class="text-center text-text-muted px-4 py-6">Nenhum item encontrado.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% include 'core/partials/_pagination_controls.html' %}
+
+</div>
 {% endblock content %}

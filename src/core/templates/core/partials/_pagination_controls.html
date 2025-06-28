@@ -1,0 +1,32 @@
+{% if page_obj.has_other_pages %}
+<nav class="flex justify-center items-center gap-2 mt-6" role="navigation" aria-label="Pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}{{ extra_querystring|default:'' }}"
+           class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-primary hover:bg-faint-violet transition">
+            ‹
+        </a>
+    {% else %}
+        <span class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-muted">‹</span>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+            <span class="px-3 py-1 rounded-lg bg-faint-violet text-white border border-faint-violet">{{ num }}</span>
+        {% elif num > page_obj.number|add:-3 and num < page_obj.number|add:3 %}
+            <a href="?page={{ num }}{{ extra_querystring|default:'' }}"
+               class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-primary hover:bg-faint-violet transition">
+                {{ num }}
+            </a>
+        {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}{{ extra_querystring|default:'' }}"
+           class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-primary hover:bg-faint-violet transition">
+            ›
+        </a>
+    {% else %}
+        <span class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-muted">›</span>
+    {% endif %}
+</nav>
+{% endif %}
