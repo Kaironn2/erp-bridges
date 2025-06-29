@@ -1,32 +1,43 @@
 {% if page_obj.has_other_pages %}
 <nav class="flex justify-center items-center gap-2 mt-6" role="navigation" aria-label="Pagination">
+    
     {% if page_obj.has_previous %}
-        <a href="?page={{ page_obj.previous_page_number }}{{ extra_querystring|default:'' }}"
-           class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-primary hover:bg-faint-violet transition">
+        <a href="?page={{ page_obj.previous_page_number }}&{{ request.GET.urlencode | cut:'page=' }}"
+           class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-primary hover:bg-faint-violet transition"
+           hx-get="?page={{ page_obj.previous_page_number }}&{{ request.GET.urlencode | cut:'page=' }}"
+           hx-push-url="true"
+           aria-label="Página Anterior">
             ‹
         </a>
     {% else %}
-        <span class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-muted">‹</span>
+        <span class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-muted" aria-disabled="true">‹</span>
     {% endif %}
 
     {% for num in page_obj.paginator.page_range %}
         {% if page_obj.number == num %}
-            <span class="px-3 py-1 rounded-lg bg-faint-violet text-white border border-faint-violet">{{ num }}</span>
+            <span class="px-3 py-1 rounded-lg bg-faint-violet text-white border border-faint-violet" aria-current="page">{{ num }}</span>
+        
         {% elif num > page_obj.number|add:-3 and num < page_obj.number|add:3 %}
-            <a href="?page={{ num }}{{ extra_querystring|default:'' }}"
-               class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-primary hover:bg-faint-violet transition">
+            <a href="?page={{ num }}&{{ request.GET.urlencode | cut:'page=' }}"
+               class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-primary hover:bg-faint-violet transition"
+               hx-get="?page={{ num }}&{{ request.GET.urlencode | cut:'page=' }}"
+               hx-push-url="true"
+               aria-label="Ir para a página {{ num }}">
                 {{ num }}
             </a>
         {% endif %}
     {% endfor %}
 
     {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}{{ extra_querystring|default:'' }}"
-           class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-primary hover:bg-faint-violet transition">
+        <a href="?page={{ page_obj.next_page_number }}&{{ request.GET.urlencode | cut:'page=' }}"
+           class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-primary hover:bg-faint-violet transition"
+           hx-get="?page={{ page_obj.next_page_number }}&{{ request.GET.urlencode | cut:'page=' }}"
+           hx-push-url="true"
+           aria-label="Próxima Página">
             ›
         </a>
     {% else %}
-        <span class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-muted">›</span>
+        <span class="px-3 py-1 rounded-lg bg-input-bg border border-slate-border text-text-muted" aria-disabled="true">›</span>
     {% endif %}
 </nav>
 {% endif %}

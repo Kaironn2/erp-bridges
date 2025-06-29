@@ -12,6 +12,8 @@ from source_m.models import Customer
 
 
 class CustomerListExportView(View):
+    main_template = 'source_m/customers-list.html'
+    table_template = 'source_m/partials/_customers-table.html'
 
     def get(self, request: HttpRequest) -> HttpResponse:
         if request.GET.get('export') == '1':
@@ -23,15 +25,16 @@ class CustomerListExportView(View):
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
 
-        customer_groups = Customer.objects.exclude(
+        context = {'page_obj': page_obj}
+
+        if request.htmx:
+            return render(request, self.table_template, context)
+
+        context['customer_groups'] = Customer.objects.exclude(
             customer_group=''
         ).values_list('customer_group', flat=True).distinct()
 
-        context = {
-            'page_obj': page_obj,
-            'customer_groups': customer_groups,
-        }
-        return render(request, 'source_m/customers-list.html', context)
+        return render(request, self.main_template, context)
 
     def export_xlsx(self, request: HttpRequest) -> HttpResponse:
         queryset = filter_customers(Customer.objects.all(), request.GET)

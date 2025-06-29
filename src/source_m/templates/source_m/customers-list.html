@@ -1,12 +1,18 @@
 {% extends 'core/base.html' %}
-{% load cpf_format %}
-{% load phone_format %}
+{% load static %}
 
 {% block content %}
 <div class="bg-midnight text-text-primary rounded-2xl p-6 m-6 shadow-lg">
     
     <!-- filters and buttons -->
-    <form method="get" class="flex justify-between items-end flex-wrap gap-4 mb-6">
+    <form 
+        method="get" 
+        class="flex justify-between items-end flex-wrap gap-4 mb-6"
+        hx-get="{% url 'source-m-customers-list' %}"
+        hx-target="#customer-table-container"
+        hx-trigger="submit, keyup delay:500ms from:input[type='text'], change from:select"
+        hx-push-url="true"
+    >
         
         <!-- filters -->
         <div class="flex flex-wrap items-end gap-4">
@@ -17,6 +23,28 @@
                     name="name"
                     id="name"
                     value="{{ request.GET.name }}"
+                    class="bg-input-bg border border-input-border text-text-primary rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-faint-violet"
+                >
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm text-text-muted">E-mail</label>
+                <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    value="{{ request.GET.email }}"
+                    class="bg-input-bg border border-input-border text-text-primary rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-faint-violet"
+                >
+            </div>
+
+            <div>
+                <label for="cpf" class="block text-sm text-text-muted">CPF</label>
+                <input
+                    type="text"
+                    name="cpf"
+                    id="cpf"
+                    value="{{ request.GET.cpf }}"
                     class="bg-input-bg border border-input-border text-text-primary rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-faint-violet"
                 >
             </div>
@@ -38,11 +66,33 @@
             </div>
         </div>
 
+        <div>
+            <label for="start_date" class="block text-sm text-text-muted">Última Compra - De</label>
+            <input 
+                type="date"
+                name="start_date"
+                id="start_date"
+                value="{{ request.GET.start_date }}"
+                class="bg-input-bg border-input-border text-text-primary rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-faint-violet"
+            >
+        </div>
+        <div>
+            <label for="end_date" class="block text-sm text-text-muted">Última Compra - Até</label>
+            <input 
+                type="date"
+                name="end_date"
+                id="end_date"
+                value="{{ request.GET.end_date }}"
+                class="bg-input-bg border-input-border text-text-primary rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-faint-violet"
+            >
+        </div>
+
         <!-- buttons -->
         <div class="flex gap-2 ml-auto">
             <button
-                type="submit"
-                name="export"
+                type="button"
+                name="export-button"
+                id="export-button"
                 value="1"
                 class="bg-slate-border hover:bg-input-border text-white px-4 py-2 rounded-lg transition"
             >
@@ -59,29 +109,13 @@
     </form>
 
     <!-- table -->
-    <div class="flex flex-col gap-1 text-sm font-medium">
-        <div class="grid grid-cols-[2fr_3fr_1.5fr_1.5fr_2fr] bg-black-pearl/50 text-text-muted px-4 py-3 rounded-md border border-slate-border uppercase tracking-wide text-xs">
-            <div class="text-left">Nome</div>
-            <div class="text-left">E-mail</div>
-            <div class="text-left">CPF</div>
-            <div class="text-left">Última Compra</div>
-            <div class="text-left">Telefone</div>
-        </div>
-
-        {% for customer in page_obj %}
-            <div class="grid grid-cols-[2fr_3fr_1.5fr_1.5fr_2fr] px-4 py-3 rounded-md border border-slate-border bg-black-pearl/50 hover:bg-black-pearl/70 transition">
-                <div class="text-left">{{ customer.first_name }} {{ customer.last_name }}</div>
-                <div class="text-left">{{ customer.email }}</div>
-                <div class="text-left">{{ customer.cpf|format_cpf }}</div>
-                <div class="text-left">{{ customer.last_order|date:"d/m/Y" }}</div>
-                <div class="text-left">{{ customer.phone|format_phone }}</div>
-            </div>
-        {% empty %}
-            <div class="text-center text-text-muted px-4 py-6">Nenhum item encontrado.</div>
-        {% endfor %}
-    </div>
-
-    {% include 'core/partials/_pagination_controls.html' %}
+    {% include 'source_m/partials/_customers-table.html' %}
 
 </div>
 {% endblock content %}
+
+
+{% block 'extra_js' %}
+    <script src="{% static 'source_m/js/customers-list.js' %}"></script>
+{% endblock %}
+    
