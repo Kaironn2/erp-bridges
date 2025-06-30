@@ -2,14 +2,12 @@ from django.db import models
 
 
 class Customer(models.Model):
-    customer_external_id = models.IntegerField(
+    external_id = models.IntegerField(
         unique=True, blank=True, null=True
     )
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    email = models.EmailField(
-        max_length=255, unique=True, blank=True, null=True
-    )
+    email = models.EmailField(max_length=255, unique=True)
     cpf = models.CharField(max_length=11, unique=True, blank=True, null=True)
     phone = models.CharField(max_length=20, blank=True, null=True)
     customer_group = models.CharField(max_length=255, blank=True, null=True)
@@ -21,32 +19,81 @@ class Customer(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    @property
-    def is_active(self):
-        return self.total_orders_count > 0
-
-    @property
-    def total_orders_count(self):
-        return self.buy_order_detail.count()
-
-    @property
-    def total_orders_amount(self):
-        return (
-            self.buy_order_detail.aggregate(
-                total_amount=models.Sum('total_amount')
-            )['total_amount']
-            or 0.00
-        )
-
     class Meta:
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
 
         indexes = [
-            models.Index(fields=['email']),
-            models.Index(fields=['cpf']),
             models.Index(fields=['cpf', 'email']),
         ]
 
     def __str__(self):
         return self.email
+
+
+class BuyOrder(models.Model):
+    order_number = models.IntegerField(unique=True)
+    customer = models.ForeignKey(
+        Customer, on_delete=models.PROTECT, related_name='buy_orders'
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Ordem de Compra'
+        verbose_name_plural = 'Ordens de Compra'
+
+    def __str__(self):
+        return str(self.order_number)
+
+
+class PaymentType(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Tipo de Pagamento'
+        verbose_name_plural = 'Tipos de Pagamento'
+
+    def __str__(self):
+        return self.name
+
+
+class Status(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Status'
+        verbose_name_plural = 'Status'
+
+    def __str__(self):
+        return self.name
+
+
+class OrderDetail(models.Model):
+    buy_order = models.OneToOneField(
+        BuyOrder, on_delete=models.CASCADE, related_name='buy_order_detail'
+    )
+    order_external_id = models.IntegerField(unique=True)
+    order_date = models.DateTimeField()
+    status = models.ForeignKey(
+        Status, models.PROTECT, related_name='buy_orders_details'
+    )
+    payment_type = models.ForeignKey(
+        PaymentType, models.PROTECT, related_name='buy_orders_details'
+    )
+    shipping_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    discount_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Detalhe da Ordem de Compra'
+        verbose_name_plural = 'Detalhes das Ordens de Compra'
+
+    def __str__(self):
+        return f'Buy Order {self.buy_order.order_number} detail'
