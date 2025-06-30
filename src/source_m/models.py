@@ -1,6 +1,19 @@
 from django.db import models
 
 
+class CustomerGroup(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Grupo de Clientes'
+        verbose_name_plural = 'Grupos de Clientes'
+
+    def __str__(self):
+        return self.name
+
+
 class Customer(models.Model):
     external_id = models.IntegerField(
         unique=True, blank=True, null=True
@@ -10,7 +23,9 @@ class Customer(models.Model):
     email = models.EmailField(max_length=255, unique=True)
     cpf = models.CharField(max_length=11, unique=True, blank=True, null=True)
     phone = models.CharField(max_length=20, blank=True, null=True)
-    customer_group = models.CharField(max_length=255, blank=True, null=True)
+    customer_group = models.ForeignKey(
+        CustomerGroup, on_delete=models.PROTECT, related_name='customers'
+    )
     customer_since = models.DateTimeField(blank=True, null=True)
     postal_code = models.CharField(max_length=20, blank=True, null=True)
     city = models.CharField(max_length=255, blank=True, null=True)
@@ -73,7 +88,7 @@ class Status(models.Model):
         return self.name
 
 
-class OrderDetail(models.Model):
+class BuyOrderDetail(models.Model):
     buy_order = models.OneToOneField(
         BuyOrder, on_delete=models.CASCADE, related_name='buy_order_detail'
     )
@@ -83,7 +98,7 @@ class OrderDetail(models.Model):
         Status, models.PROTECT, related_name='buy_orders_details'
     )
     payment_type = models.ForeignKey(
-        PaymentType, models.PROTECT, related_name='buy_orders_details'
+        PaymentType, models.PROTECT, related_name='buy_orders_details',
     )
     shipping_amount = models.DecimalField(max_digits=10, decimal_places=2)
     discount_amount = models.DecimalField(max_digits=10, decimal_places=2)
