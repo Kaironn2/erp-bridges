@@ -1,12 +1,15 @@
 import pandas as pd
 
-from source_m.models import Customer
+from source_m.models import Customer, CustomerGroup
+from source_m.repository.customer_group_repository import CustomerGroupRepository
 from source_m.repository.customer_repository import CustomerRepository
 
 
 class CustomerService:
     def __init__(self):
-        self.repository = CustomerRepository()
+        self.customer_repository = CustomerRepository()
+        self.customer_group_repository = CustomerGroupRepository()
+
         self.fields_to_track = [
             'first_name', 'last_name', 'email', 'cpf',
             'phone', 'customer_group', 'last_order'
@@ -22,32 +25,36 @@ class CustomerService:
 
             cpf = row_data.get('cpf')
             email = row_data.get('email')
+            customer_group = self._get_customer_group(row_data.get('customer_group'))
 
-            customer = self.repository.get_by_email(email=email)
-            if not customer:
-                customer = self.repository.get_by_cpf(cpf=cpf)
+            customer = self.customer_repository.get_by_email(email=email)
+            if not customer and cpf:
+                customer = self.customer_repository.get_by_cpf(cpf=cpf)
+
+            customer_data = {
+                field: row_data.get(field)
+                for field in self.fields_to_track
+            }
+            customer_data['customer_group'] = customer_group
 
             if customer:
-                if self._apply_updates(customer=customer, row_data=row_data):
+                if self._apply_updates(customer=customer, new_data=customer_data):
                     to_update.append(customer)
             else:
-                to_create.append(Customer(**{
-                    field: row_data.get(field)
-                    for field in self.fields_to_track
-                }))
+                to_create.append(Customer(**customer_data))
 
         if to_create:
-            self.repository.bulk_create(to_create, batch_size=500)
+            self.customer_repository.bulk_create(to_create, batch_size=500)
 
         if to_update:
-            self.repository.bulk_update(
+            self.customer_repository.bulk_update(
                 to_update, fields=self.fields_to_track, batch_size=500
             )
 
-    def _apply_updates(self, customer, row_data: dict) -> bool:
+    def _apply_updates(self, customer, new_data: dict) -> bool:
         updated_fields = []
         for field in self.fields_to_track:
-            new_value = row_data.get(field)
+            new_value = new_data.get(field)
             old_value = getattr(customer, field)
 
             if field == 'last_order':
@@ -59,3 +66,8 @@ class CustomerService:
                 updated_fields.append(field)
 
         return bool(updated_fields)
+
+    def _get_customer_group(self, group_name: str | None) -> CustomerGroup:
+        if not group_name or pd.isna(group_name):
+            group_name = 'nenhum'
+        return self.customer_group_repository.get_or_create_by_name(group_name)

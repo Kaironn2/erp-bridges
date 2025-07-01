@@ -29,7 +29,7 @@ def filter_customers(queryset, params: dict):
         queryset = queryset.filter(cpf__icontains=cpf)
 
     if customer_group:
-        queryset = queryset.filter(customer_group=customer_group)
+        queryset = queryset.filter(customer_group__name=customer_group)
 
     if start_date:
         try:

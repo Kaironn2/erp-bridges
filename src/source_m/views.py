@@ -1,14 +1,12 @@
-import io
-
 from django.core.paginator import Paginator
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.utils.encoding import smart_str
 from django.views.generic import View
-from openpyxl import Workbook
 
+from core.utils.workbook_utils import WorkBookUtils
 from source_m.filters import filter_customers
-from source_m.models import Customer
+from source_m.models import Customer, CustomerGroup
 
 
 class CustomerListExportView(View):
@@ -30,40 +28,37 @@ class CustomerListExportView(View):
         if request.htmx:
             return render(request, self.table_template, context)
 
-        context['customer_groups'] = Customer.objects.exclude(
-            customer_group=''
-        ).values_list('customer_group', flat=True).distinct()
+        context['customer_groups'] = CustomerGroup.objects.all().order_by('name')
 
         return render(request, self.main_template, context)
 
     def export_xlsx(self, request: HttpRequest) -> HttpResponse:
         queryset = filter_customers(Customer.objects.all(), request.GET)
 
-        wb = Workbook()
-        ws = wb.active
-        ws.title = 'Clientes'
-
         headers = ['Nome', 'E-mail', 'CPF', 'Grupo', 'Última Compra', 'Telefone']
-        ws.append(headers)
+
+        data_rows = []
 
         for customer in queryset:
             full_name = f'{customer.first_name} {customer.last_name}'
-            ws.append([
+
+            group_name = customer.customer_group.name if customer.customer_group else ''
+            last_order_str = customer.last_order.strftime(
+                '%d/%m/%Y'
+            ) if customer.last_order else ''
+
+            data_rows.append([
                 smart_str(full_name),
                 smart_str(customer.email),
                 smart_str(customer.cpf),
-                smart_str(customer.customer_group),
-                customer.last_order.strftime('%d/%m/%Y') if customer.last_order else '',
+                smart_str(group_name),
+                last_order_str,
                 smart_str(customer.phone),
             ])
 
-        buffer = io.BytesIO()
-        wb.save(buffer)
-        buffer.seek(0)
-
-        response = HttpResponse(
-            buffer,
-            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        return WorkBookUtils.generate_excel_response(
+            headers=headers,
+            data=data_rows,
+            filename='clientes.xlsx',
+            sheet_title='Clientes'
         )
-        response['Content-Disposition'] = 'attachment; filename=clientes.xlsx'
-        return response
