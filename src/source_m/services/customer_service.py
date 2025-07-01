@@ -1,14 +1,14 @@
 import pandas as pd
 
-from source_m.models import Customer, CustomerGroup
-from source_m.repository.customer_group_repository import CustomerGroupRepository
+from source_m.models import Customer
 from source_m.repository.customer_repository import CustomerRepository
+from source_m.services.customer_group_service import CustomerGroupService
 
 
 class CustomerService:
     def __init__(self):
         self.customer_repository = CustomerRepository()
-        self.customer_group_repository = CustomerGroupRepository()
+        self.customer_group_service = CustomerGroupService()
 
         self.fields_to_track = [
             'first_name', 'last_name', 'email', 'cpf',
@@ -25,7 +25,9 @@ class CustomerService:
 
             cpf = row_data.get('cpf')
             email = row_data.get('email')
-            customer_group = self._get_customer_group(row_data.get('customer_group'))
+            customer_group = self.customer_group_service.get_or_create_by_name(
+                group_name=row_data['customer_group']
+            )
 
             customer = self.customer_repository.get_by_email(email=email)
             if not customer and cpf:
@@ -66,8 +68,3 @@ class CustomerService:
                 updated_fields.append(field)
 
         return bool(updated_fields)
-
-    def _get_customer_group(self, group_name: str | None) -> CustomerGroup:
-        if not group_name or pd.isna(group_name):
-            group_name = 'nenhum'
-        return self.customer_group_repository.get_or_create_by_name(group_name)
